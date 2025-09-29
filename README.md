@@ -24,6 +24,18 @@ SnapSort is a **web-based digital time capsule** that allows users to store thei
 ---
 
 ## Project Structure
+SnapSort/
+│
+├── index.html
+├── css.html
+├── server.js
+├── package.json
+├── package-lock.json
+├── pages/
+│   ├── login.html
+│   ├── signup.html
+│   └── capsule.html
+└── node_modules/ (ignored in GitHub)
 
 
 
