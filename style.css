@@ -1,0 +1,600 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fdfdfd;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+p {
+    color: #555;
+}
+
+/* Header */
+.main-header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a4e5ee;
+}
+
+/* Buttons - Login, Sign Up, Create Capsule */
+.btn, .signup, .btn-primary {
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none; /* remove underline */
+    font-weight: 400;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover, .signup:hover, .btn-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Active / Focus effect */
+.btn:active, .btn:focus,
+.signup:active, .signup:focus,
+.btn-primary:active, .btn-primary:focus {
+    background: #000; /* stays black when clicked */
+    color: #fff;
+    outline: none; /* remove focus outline */
+    border-color: #fff;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: url('https://media.istockphoto.com/id/1400494446/video/looking-at-memories-together.jpg?s=640x640&k=20&c=EIvSB4TTETO-SlqBEmQvhndaqkSbEVlG39DL_STzuHg=') no-repeat center center/cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #ddd;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 400;
+    text-decoration: none; /* remove underline */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+
+/* Features Section - Three cards in a row, Polaroid style */
+.features {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Light background for the section */
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.feature-container-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    gap: 40px; /* Space between cards */
+    max-width: 1200px; /* Max width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the grid */
+}
+
+.feature-card {
+    background: #fff;
+    padding: 15px; /* Creates the white border for the Polaroid effect */
+    border-radius: 4px; /* Slight roundness for the card corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left as in the reference image */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* More prominent shadow on hover */
+}
+
+.feature-card img {
+    width: 100%; /* Image fills the card width */
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block; /* Removes extra space below image */
+    margin-bottom: 20px; /* Space between image and text */
+    border-radius: 2px; /* Slight roundness for the image corners */
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* About Section */
+.about {
+    background: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #bbb;
+    padding: 40px 60px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Back to top button style */
+.back-to-top {
+    font-weight: bold;
+    color: #a4e5ee !important;
+}
+
+.back-to-top:hover {
+    color: #7bd4dd !important;
+}
+
+/* Responsive design */
+@media (max-width: 992px) { /* Adjust for tablet-like screens */
+    .feature-container-row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feature-container-row {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        gap: 30px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
+/* --- Digital Time Capsule Section --- */
+.digital-time-capsule-section {
+    padding: 100px 20px;
+    background-color: #fdfdfd;
+}
+
+.digital-capsule-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.digital-capsule-container .text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.digital-capsule-container .image-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.digital-capsule-container .image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.digital-time-capsule-section .label {
+    background-color: #e6f7ff;
+    color: #0077c2;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.digital-time-capsule-section h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.digital-time-capsule-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* --- Responsive styles for the new section --- */
+@media (max-width: 992px) {
+    .digital-capsule-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .digital-capsule-container .text-content,
+    .digital-capsule-container .image-content {
+        max-width: 100%;
+    }
+
+    .digital-time-capsule-section h2 {
+        font-size: 2rem;
+    }
+}
+/* --- Digitising Service Section --- */
+.digitising-service-section {
+    padding: 100px 20px;
+    background-color: #fdfdfd;
+}
+
+.digitising-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.digitising-container .text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.digitising-container .image-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.digitising-container .image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.digitising-service-section .label {
+    background-color: #ffe0ee; /* Light pink background */
+    color: #cc0066; /* Darker pink text */
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.digitising-service-section h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.digitising-service-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.digitising-service-section .service-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.digitising-service-section .btn-service {
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* --- Responsive styles for the new digitising section --- */
+@media (max-width: 992px) {
+    .digitising-container {
+        flex-direction: column-reverse; /* Image above text on smaller screens */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .digitising-container .text-content,
+    .digitising-container .image-content {
+        max-width: 100%;
+    }
+
+    .digitising-service-section h2 {
+        font-size: 2rem;
+    }
+
+    .digitising-service-section .service-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .digitising-service-section h2 {
+        font-size: 1.8rem;
+    }
+    .digitising-service-section .service-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* --- Login Page Styles --- */
+
+/* --- Enhanced Login Page Styles (Broadened Box) --- */
+
+/* Ensures the body covers the full viewport for login page */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* slightly higher on the screen */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px; /* adds breathing space at the top */
+    background-color: #FCF7F0;
+    background-image: url('https://images.unsplash.com/photo-1579547621184-e4c19a008c90?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    /* less vertical padding, more horizontal */
+    padding: 30px 70px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 550px; /* slightly broader form */
+    text-align: center;
+    border: 1px solid #D7C3A7;
+}
+
+.login-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4F4339;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.login-container h2 {
+    font-size: 1.3rem;
+    color: #705D56;
+    margin-bottom: 25px; /* reduced gap for better balance */
+    font-weight: 400;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 18px; /* reduced vertical gap between inputs */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4F4339;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px; /* slightly smaller input height */
+    border: 1px solid #D7C3A7;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #4F4339;
+    background-color: #FCF7F0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #B27C4E;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(178, 124, 78, 0.2);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 13px; /* slightly less padding to reduce height */
+    border: none;
+    border-radius: 6px;
+    background-color: #B27C4E;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+
+.btn-login:hover {
+    background-color: #8e623e;
+    transform: translateY(-1px);
+}
+
+.forgot-password, .signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.forgot-password a, .signup-link a {
+    color: #B27C4E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password a:hover, .signup-link a:hover {
+    text-decoration: underline;
+    color: #705D56;
+}

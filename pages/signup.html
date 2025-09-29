@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapSort Signup</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Go up one folder to access style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <h1 class="login-logo">SnapSort</h1>
+        <h2>Create Your Account</h2>
+
+<form class="signup-form" onsubmit="signupUser(event)">
+    <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+    </div>
+
+    <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+    </div>
+
+    <button type="submit" class="btn-login">Sign Up</button>
+
+    <p class="signup-link">
+        Already have an account? <a href="login.html">Login</a>
+    </p>
+</form>
+
+<script>
+  // Show logged-in user's name + email
+  window.onload = function () {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (user) {
+      document.querySelector(".user-info").innerHTML = `
+        <hr>
+        <p><strong>${user.fullname}</strong><br><small>${user.email}</small></p>
+      `;
+    } else {
+      // If no user data, redirect back to login
+      window.location.href = "login.html";
+    }
+  };
+
+  function createFolder() {
+    const container = document.getElementById("folderContainer");
+    const emptyMsg = document.getElementById("emptyMessage");
+    emptyMsg.style.display = "none";
+
+    const folder = document.createElement("div");
+    folder.classList.add("folder-card");
+    folder.innerHTML = `<h3>New Folder</h3><p>0 memories</p>`;
+    container.appendChild(folder);
+  }
+</script>
+
+
+    </div>
+
+</body>
+</html>
