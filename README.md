@@ -24,6 +24,7 @@ SnapSort is a **web-based digital time capsule** that allows users to store thei
 ---
 
 ## Project Structure
+```
 SnapSort/
 │
 ├── index.html
@@ -36,10 +37,44 @@ SnapSort/
 │   ├── signup.html
 │   └── capsule.html
 └── node_modules/ (ignored in GitHub)
+```
+
+---
+
+## How to Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+```
+
+Install dependencies:
+```
+npm install
+```
+
+Start the server:
+```
+node server.js
+```
 
 
+Open your browser and go to:
+```
+http://localhost:5000
+```
 
+Make sure MongoDB is running and configured in your project.
 
+## Future Plans
 
+- Add user authentication and email verification.
+- Add notifications for locked folders nearing their due date.
+- Implement a more interactive UI for better user experience.
+
+## License
+
+This project is currently under development and not yet licensed.
 
 
