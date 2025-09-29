@@ -25,3 +25,9 @@ SnapSort is a **web-based digital time capsule** that allows users to store thei
 
 ## Project Structure
 
+
+
+
+
+
+
